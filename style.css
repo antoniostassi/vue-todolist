@@ -14,6 +14,10 @@ li {
     padding:10px;
 }
 
+li:hover {
+    cursor:default;
+}
+
 .m-5 {
     margin:50px;
 }
@@ -29,4 +33,8 @@ li {
     border-radius:15px; 
     max-height:500px; 
     overflow-y:auto;
+}
+
+.done {
+    text-decoration:line-through;
 }
