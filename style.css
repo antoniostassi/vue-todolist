@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+ul {
+    border:1px solid black;
+    display:inline-block;
+    text-decoration:none;
+    list-style-type: none;
+    text-align:left;
+}
+
+li {
+    padding:10px;
+}
+
+.m-5 {
+    margin:50px;
+}
+
+.p-1 {
+    padding:5px;
+}
