@@ -14,10 +14,12 @@
             <div class="m-5">
                 <input v-model="taskToAdd" style="padding:5px; width:20%;" type="text" name="task-list" id=""> <button class="p-1" @click="addNewTask()">Aggiungi task</button>
             </div>
-
-            <ul>
-                <li v-for="(element, elementIndex) in todoList">{{elementIndex}} | {{element.task}} <button class="p-1" @click="todoList.splice(elementIndex, 1)">x</button></li>
-            </ul>
+            <div class="list-cont">
+                <ul>
+                    <li v-for="(element, elementIndex) in todoList">{{elementIndex}} | {{element.task}} <button class="p-1" @click="todoList.splice(elementIndex, 1)">x</button></li>
+                </ul>
+            </div>
+            
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
