@@ -7,7 +7,16 @@
     </head>
     <body>
 
+        <div id="app">
 
+            <ul>
+                <li v-for="(element, elementIndex) in todoList">Index: {{elementIndex}} | {{element.task}}  <button @click="todoList.splice(elementIndex, 1)">x</button></li>
+            </ul>
+
+
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
