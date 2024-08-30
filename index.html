@@ -12,16 +12,17 @@
         <div id="app" style="text-align:center;">
 
             <div class="m-5">
-                <input v-on:keyup.enter="addNewTask()" v-model="taskToAdd" style="padding:5px; width:20%;" type="text" name="task-list" > <button class="p-1" @click="addNewTask()">Aggiungi task</button>
+                <input v-on:keyup.enter="addNewTask()" v-model="taskToAdd" style="padding:5px; width:20%;" type="text" name="task-list">  <!-- Input working properly, also with enter key -->
+                <button class="p-1" @click="addNewTask()">Aggiungi task</button> <!-- Button to add a new task to list item -->
             </div>
             <div class="list-cont">
                 <ul>
-                    <li  :class="element.done == true ? 'done':''" @click="element.done = !element.done" v-for="(element, elementIndex) in todoList">
-                        {{elementIndex}} | {{element.task}} <button class="p-1" @click="todoList.splice(elementIndex, 1)">x</button>
+                    <li :class="element.done == true ? 'done':''" @click="element.done = !element.done" v-for="(element, elementIndex) in todoList">
+                        {{elementIndex}} | {{element.task}} <!-- Elements displayed on screen -->
+                        <button class="p-1" @click="todoList.splice(elementIndex, 1)">x</button> <!-- Button to remove listitem from list -->
                     </li>
                 </ul>
             </div>
-            
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
