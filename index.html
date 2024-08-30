@@ -12,11 +12,11 @@
         <div id="app" style="text-align:center;">
 
             <div class="m-5">
-                <input v-on:keyup.enter="addNewTask()" v-model="taskToAdd" style="padding:5px; width:20%;" type="text" name="task-list" id=""> <button class="p-1" @click="addNewTask()">Aggiungi task</button>
+                <input v-on:keyup.enter="addNewTask()" v-model="taskToAdd" style="padding:5px; width:20%;" type="text" name="task-list" > <button class="p-1" @click="addNewTask()">Aggiungi task</button>
             </div>
             <div class="list-cont">
                 <ul>
-                    <li :class="element.done == true ? 'done':''" @click="element.done = !element.done" v-for="(element, elementIndex) in todoList">
+                    <li  :class="element.done == true ? 'done':''" @click="element.done = !element.done" v-for="(element, elementIndex) in todoList">
                         {{elementIndex}} | {{element.task}} <button class="p-1" @click="todoList.splice(elementIndex, 1)">x</button>
                     </li>
                 </ul>
